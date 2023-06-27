@@ -1,0 +1,86 @@
+@import "@/styles/variable.scss";
+
+.section {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    background-color: $white-1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    &_h3 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--color-dark);
+    }
+
+    &_view {
+        padding: .2rem .7rem;
+        transition: all .3s;
+        border-radius: 5px;
+        color: #3629B7;
+        font-weight: 500;
+        cursor: pointer;
+
+        &>span {
+            margin-left: .3rem;
+        }
+
+        &:hover {
+            background-color: $gray-seven;
+        }
+    }
+}
+
+.card {
+    padding: .3rem .1rem;
+    border-radius: 85px;
+    width: 65%;
+
+    &_img {
+        height: 6rem;
+        width: 4rem;
+    }
+
+    &_label {
+        color: var(--grey-light-3);
+        text-align: center;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+    }
+
+    &_size {
+        font-family: Manrope;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: -2.7px;
+        color: var(--grey-light-3);
+    }
+
+    &_blocks {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(8rem, 1fr));
+        margin: .9rem auto;
+        place-items: center;
+    }
+
+    &_orange {
+        background-color: #F87A4C;
+        gap: .5rem;
+    }
+    &_pink {
+        background-color: #F46483;
+        gap: .5rem;
+    }
+
+    &_blue {
+        background-color: #01018C;
+        gap: .5rem;
+    }
+    &_cyan {
+        background-color: #1DB1B1;
+        gap: .5rem;
+    }
+    &_purple {
+        background-color: #8675FE;
+        gap: .5rem;
+    }
+}

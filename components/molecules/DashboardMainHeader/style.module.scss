@@ -1,0 +1,46 @@
+@import "@/styles/variable.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: $gray-one;
+    }
+
+    &_span {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $gray-six;
+    }
+
+    &_input {
+        font-family: inherit;
+        font-size: inherit;
+        color: var(--color-dark);
+        background-color: $white;
+        padding: 0.3rem 9rem 0.3rem 2rem;
+        border-radius: 10px;
+        width: 95%;
+        transition: all .2s;
+        margin-left: -1.55rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--grey-light-1);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 200;
+            color: var(--color-dark);
+        }
+    }
+    &_searchIcon {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+}

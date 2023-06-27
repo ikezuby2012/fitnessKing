@@ -1,0 +1,76 @@
+@import "@/styles/variable.scss";
+
+.side {
+    flex: 0 0 15%;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $white-1;
+    border-right: var(--line);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 1rem;
+
+    &_headerlogo {
+        height: 4rem;
+        margin-top: 2rem auto 1rem auto;
+    }
+
+    &_img {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+    &_nav {
+        margin: 1rem 0;
+    }
+
+    &_link {
+        display: flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        border-radius: 7px;
+        background-color: $primary;
+
+        &>*:first-child {
+            margin-right: .5rem;
+        }
+        &_text {
+            color: var(--grey-light-3);
+            text-transform: capitalize;
+        }
+    }
+    &bar {
+        margin-bottom: auto;
+    }
+    &_div {
+        padding: .5rem 1rem;
+        transition: all .3s;
+        border-radius: 5px;
+
+        &:first-child {
+            // border-bottom: 1px solid;
+            margin-bottom: 1rem;
+        }
+        &>*:first-child {
+            margin-right: .5rem;
+        }
+        &:hover {
+            background-color: $gray-five;
+        }
+    }
+    &_div_1 {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 10rem;
+            background-color: $gray-four;
+            bottom: 5rem;
+        }
+    }
+}
+
+.img {
+    height: 1.5rem;
+    width: 1.5rem;
+}

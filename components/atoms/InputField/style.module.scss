@@ -1,0 +1,62 @@
+@import "@/styles/variable";
+
+.input {
+    width: 100%;
+
+    &_label {
+        display: block;
+        font-size: 1.2rem;
+        margin: 1rem .7rem 1rem 0;
+        text-transform: capitalize;
+        font-weight: 400;
+
+        @media only screen and (max-width: 45em) {
+            font-size: 1rem;
+        }
+    }
+
+    &_success {
+        border: 2px solid $color-success;
+    }
+
+    &_warning {
+        border: 2px solid $color-warning;
+    }
+
+    &_error {
+        border: 2px solid $color-error;
+    }
+
+    &_status {
+        display: block;
+        font-size: 1.3rem;
+        margin-top: .7rem;
+    }
+
+    &_field {
+        font-size: 1.1rem;
+        font-family: inherit;
+        color: inherit;
+        padding: .8rem .4rem .8rem .7rem;
+        border-radius: 2px;
+        background-color: rgba($gray-one, 0.9);
+        border: 2px solid transparent;
+        width: 100%;
+        outline: 1px solid rgb(139, 138, 138);
+        display: block;
+        transition: all 0.3s;
+
+        &::-webkit-input-placeholder {
+            color: $gray-seven;
+        }
+
+        &:focus {
+            border: .3px solid $gray-one;
+            color: $gray-seven;
+        }
+
+        &:invalid {
+            border: 1px solid $color-error;
+        }
+    }
+}

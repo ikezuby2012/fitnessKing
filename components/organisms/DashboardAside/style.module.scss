@@ -1,0 +1,10 @@
+.aside {
+    flex: 0 0 22%;
+
+    padding: 1.2rem .5rem;
+    background: #F5F5F5;
+
+    &>*:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}

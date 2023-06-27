@@ -1,0 +1,29 @@
+.section {
+    margin-top: 2rem;
+    &_h3 {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    &_label {
+        &>*:not(:last-child) {
+            margin-right: .4rem;
+        }
+    }
+    &_chart {
+        height: 15rem;
+        width: 100%;
+        margin: .2rem 1.2rem;
+    }
+}
+
+.blue {
+    color: #3629B7;
+}
+
+.pink {
+    color: #FBB8FF;
+}
+
+.darkPink {
+    color: #FF4267;
+}

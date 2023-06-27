@@ -1,0 +1,99 @@
+@import "@/styles/variable.scss";
+@import "@/styles/util.scss";
+
+.main {
+    flex: 1;
+
+    display: flex;
+    background-color: $background-white;
+    transition: all .3s;
+
+    &_inner {
+        flex: 1;
+        padding: 1.2rem 1.6rem;
+        transition: all .3s;
+        height: 99vh;
+
+        @include scroll-bar;
+
+        &>* {
+            &:not(:last-child) {
+                margin-bottom: .8rem;
+            }
+        }
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10rem, 1fr));
+    gap: .5rem
+}
+
+.blue {
+    background: #1DB1B1;
+}
+
+.step {
+    &_h6 {
+        font-size: 1.3rem;
+        color: var(--grey-light-3);
+        font-weight: 400;
+        margin-right: .1rem;
+    }
+
+    &_span {
+        color: var(--grey-light-3);
+    }
+}
+
+.orange {
+    background: #F87A4C;
+}
+
+.pink {
+    background: #F46483;
+}
+
+.purple {
+    background: #8675FE;
+}
+
+.calories {
+    margin: .5rem auto;
+
+    &_img {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+.hydration {
+    margin: 0 auto;
+}
+
+.heart {
+    &>*:first-child {
+        margin: 0 auto;
+    }
+
+    &_img {
+        height: 4rem;
+        width: 8rem;
+    }
+
+    &_span {
+        color: var(--grey-light-3);
+
+        &>span:first-child {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-right: .1rem;
+        }
+
+        &>span:last-child {
+            font-size: .8rem;
+        }
+    }
+
+}

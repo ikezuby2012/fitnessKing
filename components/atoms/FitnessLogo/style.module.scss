@@ -1,0 +1,23 @@
+@mixin samePara {
+    height: 4rem;
+    width: 12.5rem;
+}
+
+.fitness {
+    &Logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &King {
+       @include samePara;
+    }
+
+    &Crown {
+        height: 3rem;
+        width: 2.5rem;
+        margin-left: -4rem;
+    }
+}

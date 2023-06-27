@@ -1,0 +1,31 @@
+.block {
+    display: flex;
+    align-items: center;
+    padding: .6rem;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &_img {
+        height: 4.5rem;
+        width: 4rem;
+        margin-right: .4rem;
+    }
+
+    &_title {
+        font-size: 1rem;
+        color: var(--color-dark);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    &_desc {
+        font-size: .7rem;
+        color: var(--grey-dark-2);
+    }
+    &_bar {
+        font-size: .8rem;
+    }
+}
+.mg {
+    margin-right: -.7rem;
+}

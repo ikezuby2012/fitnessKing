@@ -1,0 +1,13 @@
+.user {
+    &_img {
+        height: 2.7rem;
+        width: 2.7rem;
+        margin-right: .5rem;
+    }
+
+    &_name {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--color-dark);
+    }
+}

@@ -1,0 +1,79 @@
+:root {
+    --color-primary-dark: #832632;
+    --color-primary-light: #98584f;
+
+    --color-sec-dark: #66327c;
+
+    --color-dark: #1f1f1f;
+    
+    --grey-text:  #475569;
+
+    --grey-light-1: #faf9f9;
+    --grey-light-2: #f4f2f2;
+    --grey-light-3: #f0eeee;
+    --grey-light-4: #ccc;
+
+    --grey-dark-1: #333;
+    --grey-dark-2: #777;
+    --grey-dark-3: #999;
+
+    --scrollbarBG: #cfd8dc;
+    --thumbBG: #495689;
+
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --line: 1px solid var(--grey-light-4);
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+    --shadow-dark-2: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+    --shadow-dark-3: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    --shadow-dark-4: rgba(235, 231, 231, 0.786) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+@import "./variable";
+@import "./util";
+
+*,
+*::before,
+*::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+html {
+    // font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 75%;
+    }
+}
+
+body {
+    color: var(--grey-text);
+    font-weight: 300;
+    font-family: $font-primary;
+    line-height: 1.6;
+    // background: linear-gradient(to bottom,
+    //         transparent,
+    //         rgba(var(--background-end-rgb), .7)) rgba(var(--background-start-rgb, .6));
+    // @include scroll-bar;
+}
+
+.container {
+    background-color: var(--grey-light-1);
+    margin: 0 auto;
+    height: 100vh;
+    overflow-x: hidden;
+
+    // @media (min-width: 1024px) {
+    //     max-width: fit-content !important;
+    // }
+
+    // @media (min-width: calc(883/16 * 1px)) {
+    //     max-width: fit-content !important;
+    // }
+}

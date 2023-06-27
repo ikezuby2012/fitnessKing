@@ -1,0 +1,10 @@
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    &_titleImg {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
