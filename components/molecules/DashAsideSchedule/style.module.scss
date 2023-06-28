@@ -1,0 +1,23 @@
+.block {
+    &_h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        text-transform: capitalize;
+    }
+
+    &_view {
+        font-size: 1rem;
+        color: #3629B7;
+        font-family: Manrope;
+
+        &Btn {
+            margin-left: .3rem;
+        }
+    }
+    &_cards {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+}

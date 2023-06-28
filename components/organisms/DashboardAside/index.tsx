@@ -6,6 +6,7 @@ import DashUserDetails from '@/components/molecules/DashUserDetails';
 import DashAsideWeight from '@/components/molecules/DashAsideWeight';
 import DashAsideGoal from '@/components/molecules/DashAsideGoal';
 import DashProgressReport from '@/components/molecules/DashProgressReport';
+import DashAsideSchedule from '@/components/molecules/DashAsideSchedule';
 
 const DashboardAside = () => {
     return (
@@ -14,6 +15,7 @@ const DashboardAside = () => {
             <DashAsideWeight />
             <DashAsideGoal />
             <DashProgressReport />
+            <DashAsideSchedule />
         </aside>
     )
 }

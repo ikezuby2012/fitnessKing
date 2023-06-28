@@ -1,0 +1,45 @@
+@import "@/styles/variable.scss";
+
+.block {
+    padding: .6rem;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &_h3 {
+        font-size: .9rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        text-transform: capitalize;
+    }
+
+    &_flex {
+        display: flex;
+        align-items: center;
+    }
+    &_img {
+        height: 3.5rem;
+        width: 3.3rem;
+        margin-right: .5rem;
+    }
+
+    &_title {
+        font-size: .9rem;
+        color: var(--color-dark);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    &_desc {
+        font-size: .7rem;
+        color: var(--grey-dark-2);
+    }
+    &_para {
+        color: #3629B7;
+        font-size: .9rem;
+        font-weight: 400;
+        padding: .3rem;
+        border-radius: 20px;
+        background: rgba(54, 41, 183, 0.20);
+        margin-left: auto;
+    }
+}
