@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head";
 import React, { FC } from "react";
 
@@ -32,6 +33,9 @@ const HeadMeta: FC<HeadProps> = ({ org = "fitnessKing", meta }) => {
       <meta name="twitter:description" content={meta.description} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link rel="shortcut icon" type="/crown-logo.svg" href="/crown-logo.svg" />
+      <link rel="icon" href="/crown-logo.svg" sizes="any" />
+      <link rel="preload" as="image" href="/crown-logo.svg"></link>
     </Head>
   )
 }
