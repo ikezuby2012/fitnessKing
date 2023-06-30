@@ -70,7 +70,7 @@ body {
     overflow-x: hidden;
 
     @media (max-width: $tablet) {
-       overflow: hidden;
+       overflow-x: hidden;
     }
 
     // @media (min-width: 1024px) {

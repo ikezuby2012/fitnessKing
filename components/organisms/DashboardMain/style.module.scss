@@ -21,6 +21,7 @@
         @media (max-width: $tablet) {
             padding: .5rem;
             overflow-x: hidden;
+            position: static;
         }
 
         @include scroll-bar;
