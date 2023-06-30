@@ -1,0 +1,16 @@
+@import "@/styles/variable.scss";
+
+.mobile {
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: flex;
+        width: 100%;
+    }
+
+    &_icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        z-index: 2;
+    }
+}

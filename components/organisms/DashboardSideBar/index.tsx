@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useRef, FC, useEffect } from 'react'
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation'
 
@@ -8,12 +8,32 @@ import { Navlinks } from './links';
 import Links from '@/components/atoms/Links';
 import { NextImage } from '@/components/atoms/NextImage';
 import FitnessLogo from '@/components/atoms/FitnessLogo';
+import { useMobileStore } from '@/store/useMobile';
 
-const DashboardSideBar = () => {
-    const pathname = usePathname()
+interface propTypes {
+    isMobile?: boolean;
+}
+
+const DashboardSideBar: FC<propTypes> = ({ isMobile }) => {
+    const IsMobile = useMobileStore((state: any) => state.isMobile)
+
+    const mobileRef = useRef<any>(null);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        console.log(IsMobile, "is mobile view");
+        if (IsMobile) mobileRef.current?.classList.toggle("open");
+        else mobileRef.current?.classList.remove("open");
+
+        return () => {
+            if (!IsMobile) {
+                mobileRef.current?.classList.remove("open");
+            }
+        }
+    }, [IsMobile])
 
     return (
-        <div className={clsx(style.side)}>
+        <div className={clsx(style.side)} ref={mobileRef}>
             <FitnessLogo className={clsx(style.side_headerlogo)} />
             <nav className={clsx(style.sidebar)}>
                 <ul className={clsx(style.side_nav)}>

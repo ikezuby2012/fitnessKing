@@ -11,6 +11,7 @@ import { NextImage } from '@/components/atoms/NextImage';
 const days = [
   "Monday", "tuesday", "wednesday", "Thursday", "friday", "Saturday", "Sunday"
 ]
+
 const DashboardMainChart = () => {
   return (
     <div className={clsx(style.section)}>

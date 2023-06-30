@@ -1,3 +1,5 @@
+@import "@/styles/variable.scss";
+
 .section {
     margin-top: 2rem;
     &_h3 {
@@ -7,6 +9,9 @@
     &_label {
         &>*:not(:last-child) {
             margin-right: .4rem;
+        }
+        @media (max-width: $tablet) {
+            justify-content: flex-start;
         }
     }
     &_chart {

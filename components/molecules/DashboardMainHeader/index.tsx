@@ -5,6 +5,7 @@ import style from "./style.module.scss";
 
 import { NextImage } from "@/components/atoms/NextImage";
 import HeadText from "@/components/atoms/HeaderText";
+import DashMobileRes from "../DashMobileRes";
 
 const DashboardMainHeader = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,6 +14,8 @@ const DashboardMainHeader = () => {
 
   return (
     <header className={clsx(style.header)}>
+      <DashMobileRes />
+      
       <div className="flex flex-col">
         <span className={clsx(style.header_span)}>Good Morning</span>
         <HeadText level={3} className={clsx(style.header_h3)}>Welcome back</HeadText>

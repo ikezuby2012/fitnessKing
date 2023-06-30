@@ -8,11 +8,20 @@
     background-color: $background-white;
     transition: all .3s;
 
+    @media (max-width: $tablet) {
+        width: 100%;
+     }
+
     &_inner {
         flex: 1;
         padding: 1.2rem 1.6rem;
         transition: all .3s;
         height: 99vh;
+
+        @media (max-width: $tablet) {
+            padding: .5rem;
+            overflow-x: hidden;
+        }
 
         @include scroll-bar;
 
@@ -27,7 +36,19 @@
 .cards {
     display: grid;
     grid-template-columns: repeat(4, minmax(10rem, 1fr));
-    gap: .5rem
+    gap: .5rem;
+
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, minmax(10rem, 1fr));
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 0;
+    }
+    &>* {
+        @media (max-width: $tablet) {
+        //    flex: 0 0 50%;
+        }
+    }
 }
 
 .blue {
@@ -65,6 +86,11 @@
     &_img {
         height: 5rem;
         width: 5rem;
+
+        @media (max-width: $tablet) {
+           height: 6rem;
+           width: 6rem;
+        }
     }
 }
 

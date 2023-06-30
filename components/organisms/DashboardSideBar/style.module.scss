@@ -10,6 +10,18 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 1rem;
 
+    @media (max-width: $tablet) {
+        position: absolute;
+        height: 100vh;
+        z-index: 1;
+        width: 90%;
+        padding-inline: 2rem;
+        transform: translateX(115%);
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
     &_headerlogo {
         height: 4rem;
         margin-top: 2rem auto 1rem auto;
@@ -34,14 +46,17 @@
         &>*:first-child {
             margin-right: .5rem;
         }
+
         &_text {
             color: var(--grey-light-3);
             text-transform: capitalize;
         }
     }
+
     &bar {
         margin-bottom: auto;
     }
+
     &_div {
         padding: .5rem 1rem;
         transition: all .3s;
@@ -51,13 +66,16 @@
             // border-bottom: 1px solid;
             margin-bottom: 1rem;
         }
+
         &>*:first-child {
             margin-right: .5rem;
         }
+
         &:hover {
             background-color: $gray-five;
         }
     }
+
     &_div_1 {
         &::after {
             content: "";
@@ -66,6 +84,10 @@
             width: 10rem;
             background-color: $gray-four;
             bottom: 5rem;
+
+            @media (max-width: $tablet) {
+                width: 90%;
+            }
         }
     }
 }
