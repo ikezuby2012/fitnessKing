@@ -4,13 +4,14 @@ import clsx from 'clsx'
 import style from "./style.module.scss";
 import { NextImage } from '@/components/atoms/NextImage'
 import ConicProgressBar from '@/components/atoms/ConicProgressBar'
+import MdConicProBar from '@/components/atoms/MdConicProBar';
 
 interface propTypes {
     title: string
     imgSrc: string
     desc: string
     percentage: number;
-    colors?: string[];
+    colors: string[];
 }
 
 const DashAsideGoalBox: FC<propTypes> = ({ title, imgSrc, desc, percentage, colors }) => {
@@ -25,7 +26,10 @@ const DashAsideGoalBox: FC<propTypes> = ({ title, imgSrc, desc, percentage, colo
                     {desc}
                 </span>
             </div>
-            <ConicProgressBar className={style.mg} fontColor='#11263C' innerClass={clsx(style.block_bar)} width={61} forceWidth={"30%"} percentage={percentage} strokeWidth={5} primaryColor={colors ?? ["#FFFFFF", "#FFFFFF"]} secondaryColor="#faf9f968" showPercentage={true} />
+            {/* <ConicProgressBar className={style.mg} fontColor='#11263C' innerClass={clsx(style.block_bar)} width={61} forceWidth={"30%"} percentage={percentage} strokeWidth={5} primaryColor={colors ?? ["#FFFFFF", "#FFFFFF"]} secondaryColor="#faf9f968" showPercentage={true} /> */}
+            <div className={clsx(style.block_progress)}>
+                <MdConicProBar progressColor={colors[0]} progressAmount={percentage.toString()} fontSize='14px' />
+            </div>
         </div>
     )
 }

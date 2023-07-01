@@ -60,6 +60,15 @@
         grid-template-columns: repeat(5, minmax(8rem, 1fr));
         margin: .9rem auto;
         place-items: center;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
     &_orange {

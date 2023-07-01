@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import clsx from 'clsx';
 
 import style from "./style.module.scss";
@@ -13,12 +13,19 @@ const days = [
 ]
 
 const DashboardMainChart = () => {
+  const [sm, setSm] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width:47em)");
+    setSm(mq.matches)
+  }, [sm]);
+
   return (
     <div className={clsx(style.section)}>
       <HeadText level={3} className={clsx(style.section_h3)}>Activity</HeadText>
       <div className={clsx(style.section_label, "flex justify-end")}>
         <span className='flex items-center capitalize'>
-          <GoDotFill className={clsx(style.blue)}/>
+          <GoDotFill className={clsx(style.blue)} />
           <span>workout</span>
         </span>
         <span className='flex items-center capitalize'>
@@ -26,7 +33,7 @@ const DashboardMainChart = () => {
           <span>calories</span>
         </span>
         <span className='flex items-center capitalize'>
-          <GoDotFill className={clsx(style.darkPink)}/>
+          <GoDotFill className={clsx(style.darkPink)} />
           <span>steps</span>
         </span>
       </div>
@@ -36,7 +43,7 @@ const DashboardMainChart = () => {
 
         <div className={clsx(style.section_days, "flex items-center justify-between")}>
           {days.map((el, i) => (
-            <span className='capitalize' key={i}>{el}</span>
+            <span className='capitalize' key={i}>{sm ? el.slice(0, 3) : el}</span>
           ))}
         </div>
       </div>

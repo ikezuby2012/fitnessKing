@@ -10,7 +10,7 @@
 
     @media (max-width: $tablet) {
         width: 100%;
-     }
+    }
 
     &_inner {
         flex: 1;
@@ -29,6 +29,10 @@
         &>* {
             &:not(:last-child) {
                 margin-bottom: .8rem;
+
+                @media (max-width: $tablet) {
+                    margin-bottom: 1.8rem;
+                }
             }
         }
     }
@@ -45,9 +49,10 @@
         // flex-wrap: wrap;
         // gap: 0;
     }
+
     &>* {
         @media (max-width: $tablet) {
-        //    flex: 0 0 50%;
+            //    flex: 0 0 50%;
         }
     }
 }
@@ -89,8 +94,8 @@
         width: 5rem;
 
         @media (max-width: $tablet) {
-           height: 6rem;
-           width: 6rem;
+            height: 6rem;
+            width: 6rem;
         }
     }
 }
@@ -123,4 +128,16 @@
         }
     }
 
+}
+
+.onlyMobile {
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: block;
+
+        &>*:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 }

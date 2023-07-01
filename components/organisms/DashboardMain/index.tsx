@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import clsx from 'clsx';
 import style from "./style.module.scss";
 
@@ -11,8 +11,17 @@ import { NextImage } from '@/components/atoms/NextImage';
 import ConicProgressBar from '@/components/atoms/ConicProgressBar';
 import DashboardMainChart from '@/components/molecules/DashboardMainChart';
 import DasboardAchievments from '@/components/molecules/DashboardAchievments';
+import DashAsideGoal from '@/components/molecules/DashAsideGoal';
+import DashAsideSchedule from '@/components/molecules/DashAsideSchedule';
 
 const DashboardMain = () => {
+  const [sm, setSm] = useState<boolean>(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width:47em)");
+    setSm(mq.matches)
+  }, [sm]);
+
   return (
     <div className={clsx(style.main)}>
       <main className={style.main_inner}>
@@ -22,14 +31,14 @@ const DashboardMain = () => {
           <DashCards title='steps' imgSrc='/images/mdi_run.svg' className={clsx(style.blue)}>
             <span className='flex items-baseline my-4'>
               <HeadText className={clsx(style.step_h6)} level={6}>5000</HeadText>
-              <span className={clsx(style.step_span, )}>steps</span>
+              <span className={clsx(style.step_span,)}>steps</span>
             </span>
 
             <ProgressBar />
           </DashCards>
 
           <DashCards title='hydration' imgSrc='/images/ic_sharp-water-drop.svg' className={clsx(style.orange)}>
-            <ConicProgressBar className={clsx(style.hydration)} width={100} fontColor='#f0eeee'  percentage={90} strokeWidth={5} primaryColor={["#FFFFFF", "#FFFFFF"]} secondaryColor="#faf9f968" />
+            <ConicProgressBar className={clsx(style.hydration)} width={100} fontColor='#f0eeee' percentage={90} strokeWidth={5} primaryColor={["#FFFFFF", "#FFFFFF"]} secondaryColor="#faf9f968" />
           </DashCards>
 
           <DashCards title='calories' imgSrc='/images/solar_fire-bold.svg' className={clsx(style.pink)}>
@@ -48,6 +57,13 @@ const DashboardMain = () => {
             </div>
           </DashCards>
         </div>
+
+
+        <div className={style.onlyMobile}>
+          <DashAsideGoal />
+          <DashAsideSchedule />
+        </div>
+
 
         <DashboardMainChart />
 
