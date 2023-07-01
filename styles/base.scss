@@ -57,7 +57,7 @@ body {
     font-weight: 300;
     font-family: $font-primary;
     line-height: 1.6;
-    overflow: hidden;
+
     // background: linear-gradient(to bottom,
     //         transparent,
     //         rgba(var(--background-end-rgb), .7)) rgba(var(--background-start-rgb, .6));
@@ -71,7 +71,7 @@ body {
     overflow-x: hidden;
 
     @media (max-width: $tablet) {
-       overflow: hidden;
+       overflow-x: hidden;
     }
 
     // @media (min-width: 1024px) {
