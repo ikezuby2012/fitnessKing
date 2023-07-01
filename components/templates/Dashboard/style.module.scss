@@ -1,5 +1,12 @@
+@import "@/styles/variable.scss";
+
 .section {
     height: 100%;
     margin: 3px;
     // max-width: 120rem;
+
+    @media (max-width: $tablet) {
+        height: 100vh;
+        margin: 0;
+    }
 }
