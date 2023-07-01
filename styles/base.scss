@@ -65,10 +65,9 @@ body {
 }
 
 .container {
-    // background-color: var(--grey-light-1);
+    background-color: var(--grey-light-1);
     margin: 0 auto;
     height: 100vh;
-    background-color: yellow;
     overflow-x: hidden;
 
     @media (max-width: $tablet) {
