@@ -20,7 +20,7 @@
         @media (max-width: $tablet) {
             padding: .5rem;
             overflow-x: hidden;
-            height: 140vh;
+            height: 120vh;
         }
 
         @include scroll-bar;
