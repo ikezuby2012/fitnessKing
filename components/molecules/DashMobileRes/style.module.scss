@@ -13,4 +13,9 @@
         width: 2.5rem;
         z-index: 2;
     }
+
+    &_nav {
+        z-index: 5;
+        transition: all .3s;
+    }
 }
