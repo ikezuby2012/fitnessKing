@@ -21,4 +21,5 @@ body {
 }
 .open {
   transform: translateX(-2%) !important;
+  opacity: 1 !important;
 }

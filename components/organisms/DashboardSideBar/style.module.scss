@@ -21,6 +21,7 @@
         transition: all 0.3s ease-in-out;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        opacity: 0;
     }
 
     &_headerlogo {
